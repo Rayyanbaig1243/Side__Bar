@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #202020;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo>h1 {
+    margin: 3px;
+    margin-left: 15px;
+    padding: 3px;
+    color: rgb(206, 185, 90);
+    margin-bottom: 10px;
+    min-width: 210px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    top: 0;
+    right: 0;
+    width: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.60);
+    border-radius: 4px;
+    padding-top: 60px;
+    transition: 0.5;
+}
+
+li>a {
+    padding: 30px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+li>a:hover {
+    background-color: #555;
+}
+
+.open-btn {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    color: rgb(206, 185, 90);
+    right: 10px;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: absolute;
+    outline: none;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    padding: 10px 15px;
+    color: rgb(206, 185, 90);
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    right: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+main {
+    transition: margin-right 0.5;
+    padding: 20px;
+    /* margin-right: 250px; */
+}
+
+.show-item {
+    width: 250px;
+}
+
+@media (min-width: 680px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    #open-btn {
+        display: none;
+    }
+    h1 {
+        margin-bottom: 0;
+        margin: 0 0 10px 0;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        /* position: flex; */
+        /* z-index: 0;? */
+        /* overflow-x: none; */
+        width: 50%;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+        height: 0;
+        overflow-x: visible;
+    }
+    li {
+        height: 0;
+        width: 5rem;
+    }
+    li>a {
+        padding: 10px;
+        height: none;
+        width: 2rem;
+        margin: 5px 20px;
+    }
+    li a:hover {
+        background-color: #555;
+    }
+    .close-btn {
+        display: none;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 680px) {
+    .navbar {
+        width: 100%;
+    }
+}
